@@ -41,7 +41,7 @@
 
       $temp = "<div>
       <h3>name</h3>
-      <div>$post['time']<div>
+      <div>$post['time']</div>
       <div>$post['text']</div>
       </div>";
     }
@@ -49,7 +49,7 @@
     else{
       $temp = "<div>
       <h3>name</h3>
-      <div>$post['time']<div>
+      <div>$post['time']</div>
       <div>$post['photo']</div>
       <div>$post['text']</div>
       </div>";

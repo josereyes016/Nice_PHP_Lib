@@ -28,37 +28,6 @@
     }
   }
 
-  /*************************/
-  /**** FEED GENERATION ****/
-  /*************************/
-
-  // OUTPUT STRING
-  $html = "";
-  foreach( $posts as $post){
-
-    // So with just text
-    if( $post['photo'] == ''){
-
-      $temp = "<div>
-      <h3>name</h3>
-      <div>$post['time']<div>
-      <div>$post['text']</div>
-      </div>";
-    }
-    // with photo
-    else{
-      $temp = "<div>
-      <h3>name</h3>
-      <div>$post['time']<div>
-      <div>$post['photo']</div>
-      <div>$post['text']</div>
-      </div>";
-    }
-
-    $html = $html . $temp;
-  }
-
- // echo($html);
 // output articles as JSON (pretty-printed for debugging convenience)
     header("Content-type: application/json");
     print(json_encode($html, JSON_PRETTY_PRINT));

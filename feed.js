@@ -1,8 +1,11 @@
 console.log("feed.js loaded");
 
-var feedT1 = $("#feed").load(feed.php);
+function feedT1() {
+	$("#feed").load(feed.php);
+	
+}
 
-var feedT2 = $.getJSON("feed.php")
+function feedT2 () { $.getJSON("feed.php")
     .done(function(data, textStatus, jqXHR) {
 	console.log("ajax complete");
         var posts = "";
@@ -36,6 +39,7 @@ var feedT2 = $.getJSON("feed.php")
          // log error to browser's console
          console.log("Could not load");
      });
+}
 
 $(function() {
 

@@ -58,6 +58,8 @@
     $html = $html . $temp;
   }
 
-  echo($html);
-
+ // echo($html);
+// output articles as JSON (pretty-printed for debugging convenience)
+    header("Content-type: application/json");
+    print(json_encode($html, JSON_PRETTY_PRINT));
  ?>

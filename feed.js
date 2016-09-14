@@ -1,8 +1,8 @@
 console.log("feed.js loaded");
 
-function feedT1 = $("#feed').load(feed.php);
+var feedT1 = $("#feed').load(feed.php);
 
-function feedT2 = $.getJSON("feed.php")
+var feedT2 = $.getJSON("feed.php")
     .done(function(data, textStatus, jqXHR) {
 	console.log("ajax complete");
         var posts = "";
